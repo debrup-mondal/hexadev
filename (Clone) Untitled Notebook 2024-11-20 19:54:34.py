@@ -16,3 +16,8 @@
 
 # MAGIC %sql
 # MAGIC create table dev.testschema.table1 (id int primary key, name string)
+
+# COMMAND ----------
+
+for stream in spark.streams.active:
+    stream.stop()
